@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Board from './components/board';
-import initializeDeck from './deck'
+import Navbar from './components/Navbar';
+import initializeDeck from './deck';
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,6 +11,10 @@ export default function App() {
   const [flipped, setFlipped] = useState([]);
   const [solved, setSolved] = useState([]);
   const [disabled, setDisabled] = useState(false);
+  const [wrongGuesses, setWrongGuesses] = useState(0);
+  const [score, setScore] = useState(0);
+  const [losses, setLosses] = useState(0);
+  const [wins, setWins] = useState(0);
 
   const sameCardClicked = (id) => flipped.includes(id);
 
@@ -34,8 +39,40 @@ export default function App() {
   
   }
   const noMatch = () => {
-    // updateGuesses(wrongGuesses, checkGuesses);
+    updateGuesses(wrongGuesses, checkGuesses);
     setTimeout(resetCards, 2000);
+  }
+  function updateScore(score, callback) {
+    var newScore = score + 1;
+    setScore(score + 1);
+    callback(newScore);
+  }
+
+  function updateGuesses(wrongGuesses, callback) {
+    var newGuesses = wrongGuesses + 1;
+    setWrongGuesses(wrongGuesses + 1);
+    callback(newGuesses);
+  }
+
+  const checkScore = (score) => {
+    if (score>7) {
+      setWins(wins + 1);
+      setTimeout(newGame, 1000);
+    }
+  }
+
+  const checkGuesses = (wrongGuesses) => {
+    if (wrongGuesses>7) {
+      setLosses(losses + 1);
+      setTimeout(newGame, 2000);
+    }
+  }
+
+  const newGame = () => {
+    setSolved([]);
+    setCards(initializeDeck());
+    setWrongGuesses(0);
+    setScore(0);
   }
 
   const preloadImages = () => 
@@ -85,8 +122,17 @@ const isMatch = (id) => {
   return flippedCard.type === clicked.type;
 }
 return (
-  <div className="App">
+  <div className="App" style={{
+    textAlign: "center"
+  }} >
     <h2>Can you remmber where the cards are?</h2>
+    <Navbar 
+        wins={wins}
+        losses={losses}
+        score={score}
+        wrongGuesses={wrongGuesses}
+        newGame={newGame}
+      />
     <Board
       dimension={dimension}
       cards={cards}
