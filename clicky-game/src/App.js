@@ -31,7 +31,7 @@ export default function App() {
       if (isMatch(id)) {
         setSolved([...solved, flipped[0], id]);
         resetCards()
-        // updateScore(score, checkScore);
+        updateScore(score, checkScore);
       } else {
         noMatch();
       }
@@ -107,18 +107,6 @@ const resizeBoard = () => {
 const isMatch = (id) => {
   const clicked = cards.find((card) => card.id === id);
   const flippedCard = cards.find((card) => flipped[0] === card.id);
-  /* 
-    Add 2 properties to state:
-      -currentScore
-      -topScore  
-    If match
-     1)increase currentScore by 1
-     2)check if current score is greater than topScore, if yes
-       set topScore to value of currentScore
-    If not match
-      -reset currentScore
-
-  */
   return flippedCard.type === clicked.type;
 }
 return (
