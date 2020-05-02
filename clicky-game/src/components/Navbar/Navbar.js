@@ -11,7 +11,6 @@ const Navbar = props => (
          
               <div className="wins">Wins: {props.wins} </div>         
               <div className="losses">Losses: {props.losses} </div>
-          
         </div>
         <div className="nav-item">
             <div className="score">Current Score: {props.score}/8</div>
