@@ -6,14 +6,6 @@ const Navbar = props => (
     <div>
       <ul className="navbar-nav">
       <div className="instruction">
-          <div>MEMORY</div>
-  
-            <div className="instruction">Can you remember where the cards are?</div>
-        </div>
-        <div className="nav-item">
-          <button className="restart" onClick={() => props.newGame()}>
-            Restart Game
-          </button>
         </div>
         <div className="nav-item">
          
@@ -25,6 +17,11 @@ const Navbar = props => (
             <div className="score">Current Score: {props.score}/8</div>
 
             <div className="wrongGuesses">Incorrect Guesses: {props.wrongGuesses}/8</div>
+            <div className="nav-item">
+          <button className="restart" onClick={() => props.newGame()}>
+            Restart Game
+          </button>
+        </div>
         </div>
       </ul>
     </div>
