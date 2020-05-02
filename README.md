@@ -1,12 +1,10 @@
-# React-Clicky-Game
-# &#35; MoMA Clicky Game&nbsp;&nbsp;<img src="https://img.icons8.com/color/48/000000/picasso.png"><img src="https://img.icons8.com/color/48/000000/modern-art.png"><img src="https://img.icons8.com/color/48/000000/easel.png"><img src="https://img.icons8.com/color/48/000000/magritte.png"><img src="https://img.icons8.com/color/48/000000/edvard-munch.png">
+# &#35; Marvel Clicky Game&nbsp;&nbsp;<img src="https://www.logolynx.com/topic/marvel+superhero#&gid=1&pid=1">
 
 ## What is This?
 This is an EXTREME memorization and click game. The object of the game is to click on only one painting once. If you repeat guesses, you lose and the score is reset to 0. You win by reaching the max score total of 24.
 
 ## Getting Started
-Try the app Here [https://moma-clicky-game.herokuapp.com/](https://moma-clicky-game.herokuapp.com/) (`Heroku`)
-
+ 
 ## The Screenshot
 ![Screenshot](/public/assets/screenshots/demo-01.png)
 `Can you remember all 24 paintings?`&#8673;
@@ -35,11 +33,11 @@ Try the app Here [https://moma-clicky-game.herokuapp.com/](https://moma-clicky-g
 * [VSCode](https://code.visualstudio.com/)
 
 ## How to Install and Run
-01. git clone https://github.com/katbytes/React-Clicky-Game.git
+01. git clone https://github.com/guyyaffear/React-Clicky-Game.git
 02. cd into the react-clicky-game (pwd or ls to check yo self)
 03. Run yarn install to get all dependencies
 04. Run yarn start (in bash/powershell)
 05. Go to localhost:3000 in your web browser (chrome)
 
 ## About the Author:
-[Katherine J. Bell](https://github.com/katbytes)
+[Guy Yaffe Ermoza](https://github.com/guyyaffear)
