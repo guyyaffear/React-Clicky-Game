@@ -8,7 +8,6 @@ const Navbar = props => (
       <div className="instruction">
         </div>
         <div className="nav-item">
-         
               <div className="wins">Wins: {props.wins} </div>         
               <div className="losses">Losses: {props.losses} </div>
         </div>
