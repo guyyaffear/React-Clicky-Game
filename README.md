@@ -6,7 +6,7 @@ This is an EXTREME memorization and click game. The object of the game is to cli
 ## Getting Started
  
 ## The Screenshot
-![Screenshot](/public/assets/screenshots/demo-01.png)
+![Screenshot](/public/img/screenshots/2020-05-03 22_19_25-React App.png)
 `Can you remember all 24 paintings?`&#8673;
 
 ![Screenshot](/public/assets/screenshots/demo-02.png)
